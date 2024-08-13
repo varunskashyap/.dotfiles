@@ -21,9 +21,11 @@ require("lazy").setup({
   "nvim-tree/nvim-tree.lua", -- file explorer
   "christoomey/vim-tmux-navigator",
 
+  "folke/which-key.nvim", -- shows keymaps
+
   "nvim-lua/plenary.nvim", -- lua functions that many plugins use
 
   -- fuzzy finding
   { "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
-  { "nvim-telescope/telescope.nvim", branch = "0.1.x" }
+  { "nvim-telescope/telescope.nvim", branch = "0.1.x" },
 })

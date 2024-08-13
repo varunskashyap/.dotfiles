@@ -46,3 +46,6 @@ opt.undofile = true
 
 opt.iskeyword:append("-")
 opt.errorbells = false
+
+-- appearance
+vim.api.nvim_set_hl(0, 'NormalFloat', {bg='#3B4252'}) -- which key background color
