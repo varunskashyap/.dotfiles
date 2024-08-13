@@ -28,4 +28,11 @@ require("lazy").setup({
   -- fuzzy finding
   { "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
   { "nvim-telescope/telescope.nvim", branch = "0.1.x" },
+
+  -- Competitest
+  {
+	  'xeluxee/competitest.nvim',
+	  dependencies = 'MunifTanjim/nui.nvim',
+	  config = function() require('competitest').setup() end,
+  },
 })
