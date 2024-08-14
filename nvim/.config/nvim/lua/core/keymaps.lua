@@ -7,6 +7,10 @@ vim.g.mapleader = " "
 keymap.set("i", "jk", "<esc>")
 keymap.set("n", "<leader>nh", ":nohl<cr>")
 
+-- move lines up or down
+keymap.set("n", "K", "ddkP") -- move line up
+keymap.set("n", "J", "ddp") -- move line down
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
