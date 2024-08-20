@@ -1,14 +1,5 @@
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
-  print("telescope not installed")
-  return
-end
-
-local actions_setup, actions = pcall(require, "telescope.actions")
-if not actions_setup then
-  print("telescope actions not installed")
-  return
-end
+local telescope = require("telescope")
+local actions = require("telescope.actions")
 
 telescope.setup({
   -- configure custom mappings
