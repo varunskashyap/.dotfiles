@@ -1,4 +1,6 @@
-require('competitest').setup {
+local competitest = require("competitest")
+
+competitest.setup({
 	local_config_file_name = ".competitest.lua",
 
 	floating_border = "rounded",
@@ -122,7 +124,7 @@ require('competitest').setup {
 	received_contests_problems_path = "$(PROBLEM).$(FEXT)",
 	received_contests_prompt_directory = true,
 	received_contests_prompt_extension = true,
-	open_received_problems = true,
-	open_received_contests = true,
+	open_received_problems = false,
+	open_received_contests = false,
 	replace_received_testcases = false,
-}
+})

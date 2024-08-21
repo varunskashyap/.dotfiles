@@ -1,5 +1,9 @@
 local opt = vim.opt
 
+-- change shell to be interactive to use .zshrc
+-- https://vi.stackexchange.com/questions/16186/how-to-run-zsh-aliased-command-from-vim-command-mode
+opt.shell = "/bin/zsh -i"
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true

@@ -15,24 +15,29 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- code
   "jiangmiao/auto-pairs",
   "sudar/comments.vim",
 
   "nvim-tree/nvim-tree.lua", -- file explorer
-  "christoomey/vim-tmux-navigator",
+  "christoomey/vim-tmux-navigator", -- window navigation
 
-  "folke/which-key.nvim", -- shows keymaps
-
-  "nvim-lua/plenary.nvim", -- lua functions that many plugins use
+  { "folke/which-key.nvim", event = "VeryLazy" }, -- shows keymaps
 
   -- fuzzy finding
   { "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
   { "nvim-telescope/telescope.nvim", branch = "0.1.x" },
 
-  -- Competitest
-  {
-	  'xeluxee/competitest.nvim',
-	  dependencies = 'MunifTanjim/nui.nvim',
-	  config = function() require('competitest').setup() end,
+  -- UI
+  { "folke/noice.nvim",
+    dependencies = { 
+      "MunifTanjim/nui.nvim",
+      { "rcarriga/nvim-notify", opts = { background_colour = "#000000" }  }
+    }
   },
+  { "goolord/alpha-nvim", event = "VimEnter" }, -- Greeter
+  { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- status line
+
+  -- Competitest
+  { "xeluxee/competitest.nvim", dependencies = "MunifTanjim/nui.nvim" },
 })
