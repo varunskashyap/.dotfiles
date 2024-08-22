@@ -1,5 +1,6 @@
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
+local mason_tool_installer = require("mason-tool-installer")
 
 mason.setup({
   ui = {
@@ -22,4 +23,14 @@ mason_lspconfig.setup({
   },
   -- auto install configured servers (with lspconfig)
   automatic_installation = true,
+})
+
+mason_tool_installer.setup({
+  ensure_installed = {
+    "clang-format", -- cpp formatter
+    "black", -- python formatter
+    "prettier", -- prettier formatter
+    "stylua", -- lua formatter
+    "isort", -- python formatter
+  },
 })

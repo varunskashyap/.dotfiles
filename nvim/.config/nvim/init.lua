@@ -12,6 +12,6 @@ require("plugins.nvim-cmp")
 require("plugins.nvim-tree")
 require("plugins.telescope")
 
+require("plugins.lsp.format")
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.mason")
-

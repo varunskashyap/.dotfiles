@@ -18,6 +18,8 @@ require("lazy").setup({
   -- code
   "jiangmiao/auto-pairs",
   "sudar/comments.vim",
+
+  -- lsp
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
@@ -28,19 +30,24 @@ require("lazy").setup({
       "saadparwaiz1/cmp_luasnip", -- for autocompletion
       "rafamadriz/friendly-snippets", -- useful snippets
       "onsails/lspkind.nvim", -- vs-code like pictograms
-    }
+    },
   },
-
-  -- lsp
-  { "williamboman/mason.nvim", dependencies = "williamboman/mason-lspconfig.nvim" },
+  {
+    "williamboman/mason.nvim",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       { "antosha417/nvim-lsp-file-operations", config = true },
       { "folke/neodev.nvim", opts = {} },
-    }
+    },
   },
+  { "stevearc/conform.nvim", event = { "BufReadPre", "BufNewFile" } }, -- format files
 
   "nvim-tree/nvim-tree.lua", -- file explorer
   "christoomey/vim-tmux-navigator", -- window navigation
@@ -48,15 +55,15 @@ require("lazy").setup({
   { "folke/which-key.nvim", event = "VeryLazy" }, -- shows keymaps
 
   -- fuzzy finding
-  { "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   { "nvim-telescope/telescope.nvim", branch = "0.1.x" },
 
   -- UI
   "marko-cerovac/material.nvim", -- color scheme
-  { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify"} }, -- notifications
+  { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } }, -- notifications
   { "goolord/alpha-nvim", event = "VimEnter" }, -- Greeter
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- status line
-  {  "stevearc/dressing.nvim", event = "VeryLazy"},
+  { "stevearc/dressing.nvim", event = "VeryLazy" },
 
   -- Competitest
   { "xeluxee/competitest.nvim", dependencies = "MunifTanjim/nui.nvim" },
