@@ -1,9 +1,5 @@
 local opt = vim.opt
 
--- change shell to be interactive to use .zshrc
--- https://vi.stackexchange.com/questions/16186/how-to-run-zsh-aliased-command-from-vim-command-mode
-opt.shell = "/bin/zsh -i"
-
 -- line numbers
 opt.relativenumber = true
 opt.number = true
@@ -52,5 +48,5 @@ opt.iskeyword:append("-")
 opt.errorbells = false
 
 -- appearance
-vim.api.nvim_set_hl(0, 'FloatBorder', {bg='#3B4252', fg='#5E81AC'})
-vim.api.nvim_set_hl(0, 'NormalFloat', {bg='#3B4252'}) -- which key background color
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#3B4252", fg = "#5E81AC" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#3B4252" }) -- which key background color

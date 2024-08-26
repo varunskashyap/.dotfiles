@@ -51,6 +51,7 @@ require("lazy").setup({
 
   "nvim-tree/nvim-tree.lua", -- file explorer
   "christoomey/vim-tmux-navigator", -- window navigation
+  "akinsho/toggleterm.nvim",
 
   { "folke/which-key.nvim", event = "VeryLazy" }, -- shows keymaps
 
@@ -60,7 +61,6 @@ require("lazy").setup({
 
   -- UI
   "marko-cerovac/material.nvim", -- color scheme
-  { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } }, -- notifications
   { "goolord/alpha-nvim", event = "VimEnter" }, -- Greeter
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- status line
   { "stevearc/dressing.nvim", event = "VeryLazy" },
