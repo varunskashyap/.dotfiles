@@ -1,0 +1,24 @@
+[user]
+	email = varunskashyap@gmail.com
+	name = Varun Kashyap
+  username = varunskashyap
+[init]
+  defaultBranch = main
+[core]
+  editor = nvim
+[alias]
+	adog = log --all --decorate --oneline --graph
+[commit]
+  template = /Users/varunkashyap/.config/git/commit_message
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = false
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[merge]
+    tool = nvimdiff
+[mergetool]
+    prompt = true
+[mergetool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
