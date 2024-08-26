@@ -51,7 +51,7 @@ require("lazy").setup({
 
   "nvim-tree/nvim-tree.lua", -- file explorer
   "christoomey/vim-tmux-navigator", -- window navigation
-  "akinsho/toggleterm.nvim",
+  "numToStr/FTerm.nvim",
 
   { "folke/which-key.nvim", event = "VeryLazy" }, -- shows keymaps
 

@@ -10,7 +10,7 @@ require("plugins.lualine")
 require("plugins.nvim-cmp")
 require("plugins.nvim-tree")
 require("plugins.telescope")
-require("plugins.toggleterm")
+require("plugins.fterm")
 
 require("plugins.lsp.format")
 require("plugins.lsp.lspconfig")
