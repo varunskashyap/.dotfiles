@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- code
   "jiangmiao/auto-pairs",
-  "sudar/comments.vim",
+  "numToStr/Comment.nvim",
 
   -- lsp
   {
