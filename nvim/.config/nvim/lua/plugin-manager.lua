@@ -65,6 +65,6 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- status line
   { "stevearc/dressing.nvim", event = "VeryLazy" },
 
-  -- Competitest
-  { "xeluxee/competitest.nvim", dependencies = "MunifTanjim/nui.nvim" },
+  -- codeium AI
+  { "Exafunction/codeium.nvim", dependencies = { "nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp" } },
 })

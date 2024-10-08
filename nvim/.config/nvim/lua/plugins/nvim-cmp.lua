@@ -1,6 +1,5 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
-local lspkind = require("lspkind")
 
 -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -28,6 +27,9 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "buffer" }, -- text within current buffer
     { name = "path" }, -- file system paths
+    { name = "codeium" },
     { name = "luasnip" }, -- snippets
   }),
+  -- enable ghost text
+  experimental = { ghost_text = true },
 })

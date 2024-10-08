@@ -5,7 +5,7 @@ require("core.keymaps")
 require("core.options")
 
 require("plugins.alpha-nvim")
-require("plugins.competitest")
+require("plugins.codeium")
 require("plugins.lualine")
 require("plugins.nvim-cmp")
 require("plugins.nvim-tree")

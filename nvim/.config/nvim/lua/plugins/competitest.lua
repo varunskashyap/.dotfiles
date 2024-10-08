@@ -138,7 +138,7 @@ competitest.setup({
 
   companion_port = 10046,
   receive_print_message = true,
-  template_file = "~/programming/cp-book/template.cpp",
+  template_file = "~/programming/cp-book/src/template.cpp",
   evaluate_template_modifiers = false,
   date_format = "%c",
   received_files_extension = "cpp",
